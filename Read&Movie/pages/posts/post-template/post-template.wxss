@@ -1,0 +1,65 @@
+.portrait{
+   height: 60rpx;
+   width: 60rpx;
+   vertical-align: middle;
+ }
+ .date{
+   vertical-align: middle;
+   margin-left: 20rpx;
+   font-size: 26rpx;
+   margin-bottom: 5px;
+ }
+ .title{
+   color: #333;
+ }
+
+.passage-image{
+  width: 100%;
+  margin-left: 6px;
+  height: 340rpx;
+  margin: auto 0;
+  margin-bottom: 15px;
+}
+
+.passage{
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
+}
+
+.comments-container{
+  font-size: 13rpx;
+  flex-direction: row;
+  line-height: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.comments{
+  height: 16px;
+  width:16px;
+  margin-right: 8px;
+  vertical-align: middle;
+} 
+.comments-font{
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 20rpx;
+}
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   margin-top: 20rpx;
+   margin-bottom: 40rpx;
+   background-color: white;
+   border-bottom: 1px solid #ededed;
+   border-top: 1px solid #ededed;
+   padding-bottom: 5rpx;
+ }
+ .author-date{
+   margin: 10rpx 0rpx 20rpx 10rpx;
+ }
+ 

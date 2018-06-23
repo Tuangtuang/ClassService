@@ -1,0 +1,22 @@
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   margin-top: 20rpx;
+   margin-bottom: 40rpx;
+   background-color: white;
+   
+ }
+
+ .content{
+   font-size: 40rpx;
+   margin-left: 20rpx;
+   margin-right: 20rpx;
+   word-break:break-all;
+  margin-bottom: 20rpx;
+ }
+
+.choice{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}

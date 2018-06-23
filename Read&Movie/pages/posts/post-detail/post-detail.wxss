@@ -1,0 +1,23 @@
+/* pages/post-detail/post-detail.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.head-image{
+  width: 100%;
+  height: 600rpx;
+}
+
+.author-container{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.portrait{
+   height: 60rpx;
+   width: 60rpx;
+   vertical-align: middle;
+ }

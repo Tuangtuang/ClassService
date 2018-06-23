@@ -1,0 +1,12 @@
+<import src='../student-template/student-template.wxml' />
+<view class='container'>
+  
+  <text class='title'>PaperName</text>  
+  <text class='date'>2018-6-18</text>
+  <text class='deadline'>时限：00:01:00</text>
+  <text class='type'>三、判断题</text>
+  <block wx:for="{{postkey}}"  for-item="item" for-index='index'>
+    <!-- <text>HHH</text> -->
+    <template is="problems" data='{{...item}}' />
+  </block>
+</view>

@@ -1,0 +1,19 @@
+{
+  "pages": [
+   "pages/student/Judge/Judge" ,
+   "pages/student/Single/Single",
+    "pages/student/student",
+    "pages/welcome/welcome",
+    "pages/posts/posts",
+    "pages/posts/post-detail/post-detail",
+    
+    "pages/student/Multiple/Multiple"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "课堂测试",
+    "navigationBarTextStyle": "black"
+  }
+}

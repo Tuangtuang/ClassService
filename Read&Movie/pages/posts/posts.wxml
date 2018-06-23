@@ -1,0 +1,20 @@
+<import src='./post-template/post-template.wxml' />
+<view>
+  <swiper class='lunbo' indicator-dots='true' autoplay='true' interval='5000'>
+    <swiper-item>
+      <image src='/images/wx.png' class='lunbo'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/vr.png' class='lunbo'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/iqiyi.png' class='lunbo'></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postkey}}" for-item="item">
+    <view catchtap='onTap' data-Id="{{item.postId}}">
+      <template is="postitem" data='{{...item}}' />
+    </view>
+  </block>
+
+</view>

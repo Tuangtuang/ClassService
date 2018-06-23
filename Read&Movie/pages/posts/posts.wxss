@@ -1,0 +1,6 @@
+ @import "post-template/post-template.wxss";
+ .lunbo{
+   height: 600rpx;
+   width: 100%;
+ }
+ 

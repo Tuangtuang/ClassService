@@ -1,0 +1,17 @@
+<template name='postitem'>
+<view class='container'>
+    <view class='author-date'>
+      <image  src='{{portrait}}' class='portrait'></image>
+      <text class='date'>{{date}}{{index}}</text>
+    </view>
+    <text class='title'>{{ttl}}</text>
+    <image src='{{passageimg}}' class='passage-image'></image>
+    <text class='passage'>{{content}}</text>
+    <view class='comments-container'>
+    <image src='../../images/icon/chat.png' class='comments'></image>
+    <text class='comments-font'>{{comments}}</text>
+    <image src='../../images/icon/view.png' class='comments'></image>
+    <text class='comments-font'>{{see}}</text>
+    </view>
+  </view>
+</template>
