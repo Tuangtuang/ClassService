@@ -1,0 +1,30 @@
+<view>
+  <block wx:for="{{postkey}}">
+    <view class='container'>
+      <view class='first-line'>
+        <image src='{{item.Classicon}}' class='icon'></image>
+        <text class='class-name'>{{item.Classname}}</text>
+        <view class='text' bindtap='chooseSezi'>详情🔎</view>
+      </view>
+      <view class='second-line'>
+        <text class='teacher'>教师：{{item.Teachername}}</text>
+      </view>
+      <view class='third-line'>
+        <text class='Num'> 人数：{{item.Studentnumber}}</text>
+      </view>
+          
+    </view>
+  </block>
+  <view class='commodity_screen' wx:if="{{chooseSize}}" bindtap='hideModal'></view>
+<view class='commodity_attr_box' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+  <button class='button' catchtap='onClick'>
+    查看公告
+  </button>
+  <button class='button'catchtap='ToClassmate' >
+    查看同学
+  </button>
+  <button class='button' catchtap='ToPaper'>
+    查看试卷
+  </button>
+</view>
+</view>

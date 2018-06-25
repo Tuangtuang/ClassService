@@ -1,0 +1,19 @@
+<view>
+  <block wx:for="{{postkey}}">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="../Paper-index/Paper-index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+        <image wx:if="{{item.Status}}"src="/images/tick.png" class='picture'></image>
+        <image wx:if="{{!item.Status}}"src="/images/wait.png" class='picture'></image>
+        <view class="weui-cell__bd">{{item.Papername}}
+        </view>
+
+        <view class="weui-cell__ft weui-cell__ft_in-access">
+          <!-- <text class='time'> -->
+          {{item.Endtime}}
+          <!-- </text> -->
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>

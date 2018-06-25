@@ -1,0 +1,53 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-top:10rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #ededed;
+}
+
+
+
+.studentNum{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+
+.first-line{
+  display: flex;
+  flex-direction: row;
+}
+
+.class-name{
+  vertical-align: middle;
+  margin-left: 40rpx;
+  font-size: 50rpx;
+  width: 60%;
+  color: darkblue;
+  
+}
+
+.second-line{
+  display: flex;
+  flex-direction: row;
+}
+.teacher{
+  color: gray;
+  margin-left: 150rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+.text{
+  margin-right: 30rpx;
+  color: #ce3c31;
+  vertical-align: middle;
+  margin-top: 10rpx;
+
+}

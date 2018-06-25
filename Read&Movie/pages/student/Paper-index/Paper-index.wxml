@@ -1,0 +1,68 @@
+<import src='../student-template/student-template.wxml' />
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="" hidden="{{activeIndex != 0}}">
+          <import src='../student-template/student-template.wxml' />
+          <view class='container'>
+            <text class='title'>PaperName</text>
+            <text class='date'>2018-6-18</text>
+            <text class='deadline'>时限：00:01:00</text>
+            <text class='type'>一、单选题</text>
+            <block wx:for="{{Singlegroups}}" for-item="item" for-index='index'>
+              <!-- <text>HHH</text> -->
+              <template is="problems" data='{{...item}}' />
+            </block>
+          </view>
+        </view>
+        <view  hidden="{{activeIndex != 1}}">
+          <view class='container'>
+            <text class='title'>PaperName</text>
+            <text class='date'>2018-6-18</text>
+            <text class='deadline'>时限：00:01:00</text>
+            <text class='type'>二、多选题</text>
+            <block wx:for="{{Multiplegroups}}" for-item="item" for-index='index'>
+              <view class='loop-container'>
+                <view class='content'>
+                  {{item.questions}}
+                </view>
+                <view>
+                  <checkbox-group>
+                    <view>
+                      <label class="checkbox" wx:for="{{item.items}}" wx:for-item="cell">
+                        <checkbox value="{{cell.name}}" checked="{{cell.checked}}" class='choice' />{{cell.value}}
+                        <text>\n</text>
+                      </label>
+                    </view>
+                  </checkbox-group>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+        <view  hidden="{{activeIndex != 2}}">
+          <view class='container'>
+            <text class='title'>PaperName</text>
+            <text class='date'>2018-6-18</text>
+            <text class='deadline'>时限：00:01:00</text>
+            <text class='type'>三、判断题</text>
+            <block wx:for="{{Judgegroups}}" for-item="item" for-index='index'>
+              <!-- <text>HHH</text> -->
+              <template is="problems" data='{{...item}}' />
+            </block>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

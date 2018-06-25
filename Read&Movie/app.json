@@ -1,14 +1,12 @@
 {
   "pages": [
-   "pages/student/Judge/Judge" ,
-   "pages/student/Single/Single",
     "pages/student/student",
-    "pages/welcome/welcome",
     "pages/posts/posts",
+    "pages/student/Paper/Paper",
     "pages/posts/post-detail/post-detail",
-    
-    "pages/student/Multiple/Multiple"
-    
+    "pages/student/Class/Class",
+    "pages/student/Classmate/Classmate",
+    "pages/student/Paper-index/Paper-index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

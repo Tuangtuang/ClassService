@@ -1,0 +1,49 @@
+.moto{ 
+  font-size: 63rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+  color: black;
+  margin-top: 300rpx;
+}
+
+.add-box{
+  margin-top:100rpx;
+  border: 1px solid black;
+  width: 300rpx;
+  height: 120rpx;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.search-box{
+  margin-top:150rpx;
+  border: 1px solid black;
+  width: 300rpx;
+  height: 120rpx;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Welcome{
+  margin-top: 200rpx;
+  
+}
+
+.content{
+  font-size: 80rpx;
+}
+
+.jump{
+  background-color: red;
+}
+
+.decor{
+  width: 100%;
+  height: 600rpx;
+}

@@ -1,0 +1,13 @@
+/* pages/student/Paper/Paper.wxss */
+.picture{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.time{
+  vertical-align: middle;
+  white-space: nowrap;
+}
+

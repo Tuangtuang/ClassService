@@ -1,0 +1,13 @@
+<view class='container'>
+  <image src='/images/school.png' class='decor'></image>
+  <view class='add-box'>
+    <view style='margin-top:20rpx'>
+      <text class='moto'>加入班级</text>
+    </view>
+  </view>
+  <view class='search-box'>
+    <view style='margin-top:20rpx' catchtap='Click'>
+      <text class='moto'>查看班级</text>
+    </view>
+  </view>
+</view>

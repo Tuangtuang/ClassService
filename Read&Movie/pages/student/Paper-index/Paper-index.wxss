@@ -1,0 +1,119 @@
+/* pages/student/Paper-index/Paper-index.wxss */
+ @import "../student-template/student-template.wxss";
+page,
+.page,
+.page__bd{
+    height: 100%;
+    background-color: white;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  border-bottom: 1rpx solid #ccc;
+  background-color: white;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  margin-top: 0rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 80rpx;
+}
+
+.date{
+  margin-top: 20rpx;
+  width: 100%;
+  text-align: center;
+  color: grey;
+}
+
+.type{
+  margin-left: 20rpx;
+  font-size: 40rpx;
+  margin-top: 10rpx;
+  font-weight: bold;
+}
+
+.deadline{
+  margin-top: 10rpx;
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 80rpx;
+}
+
+.date{
+  margin-top: 20rpx;
+  width: 100%;
+  text-align: center;
+  color: grey;
+}
+
+.type{
+  margin-left: 20rpx;
+  font-size: 40rpx;
+  margin-top: 10rpx;
+ 
+}
+
+.deadline{
+  margin-top: 10rpx;
+  width: 100%;
+  text-align: center;
+  color: red;
+}
+
+.content{
+   font-size: 40rpx;
+   margin-left: 20rpx;
+   margin-right: 20rpx;
+   word-break:break-all;
+  margin-bottom: 20rpx;
+ }
+
+.choice{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.loop-container{
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   margin-top: 20rpx;
+   margin-bottom: 40rpx;
+   background-color: white;   
+ }
+
+ 
+
