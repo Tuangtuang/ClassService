@@ -1,5 +1,17 @@
 var groups=[
   {
+    Classname: '计算机组成原理',
+    Teachername: '男神',
+    Studentnumber: '70',
+    Classicon: '/images/avatar/2.png',
+  },
+  {
+    Classname: '离散数学',
+    Teachername: '武频',
+    Studentnumber: '70',
+    Classicon: '/images/avatar/4.png',
+  },
+  {
     Classname:'数据结构',
     Teachername:'郑宇',
     Studentnumber:'60',

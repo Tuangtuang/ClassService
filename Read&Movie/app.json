@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/teacher/Paper-index/Paper-index",
     "pages/student/student",
     "pages/posts/posts",
     "pages/student/Paper/Paper",
@@ -7,11 +8,12 @@
     "pages/student/Class/Class",
     "pages/student/Classmate/Classmate",
     "pages/student/Paper-index/Paper-index"
+    
   ],
   "window": {
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#000000",
     "backgroundTextStyle": "light",
     "navigationBarTitleText": "课堂测试",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

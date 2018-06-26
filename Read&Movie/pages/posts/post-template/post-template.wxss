@@ -11,6 +11,7 @@
  }
  .title{
    color: #333;
+   width: 100%;
  }
 
 .passage-image{

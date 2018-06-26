@@ -1,6 +1,6 @@
 var groups = [
   {
-    questions: "1. 影帝很帅",
+    questions: "1. XXXXXXX",
     items: [
       { name: 'A', value: '对' },
       { name: 'B', value: '错' },
@@ -8,7 +8,7 @@ var groups = [
     ]
   },
   {
-    questions: '2. 影帝世界第一',
+    questions: '2. xxxxxxxxxxxxx',
     items: [
       { name: 'A', value: '对' },
       { name: 'B', value: '错' }
