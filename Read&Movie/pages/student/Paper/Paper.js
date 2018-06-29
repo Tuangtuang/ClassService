@@ -1,21 +1,52 @@
 // pages/student/Paper/Paper.js
-var PaperData=require("../../../data/paper-data.js")
+//var PaperData=require("../../../data/paper-data.js")
+var app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    groups: [],
+    Classname: '',
   },
   
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({
-      postkey: PaperData.postList
+  onLoad: function (option) {
+    // this.setData({
+    //   postkey: PaperData.postList
+    // });
+    var that =this;
+    var id=JSON.parse(option.id);
+    that.setData({
+      Classname:id
     });
+    console.log(this.data.Classname);
+    wx.request({
+      url: 'http://localhost:8081/api/both/allPaper',
+      method:"GET",
+      header:{
+        "Authorization": app.globalData.token
+      },
+      data:{
+        "Classname": this.data.Classname
+      },
+      success:function(res){
+        console.log(res);
+        that.setData({
+          groups:res.data.data
+        })
+      },
+      fail: function (e) {
+        wx.showToast({
+          title: '请检查网络',
+          icon: 'loading',
+          duration: 800
+        })
+      }
+    })
   },
 
   /**

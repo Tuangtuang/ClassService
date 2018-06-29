@@ -1,0 +1,14 @@
+/* pages/student/Add-Class/Add-Class.wxss */
+.input-box{
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+  margin-top: 30rpx;
+  margin-left:20rpx;
+  margin-right: 20rpx;
+  border-right: 1px solid #ededed;
+  border-left: 1px solid #ededed;
+}
+
+.submit{
+  margin-top: 410rpx;
+}

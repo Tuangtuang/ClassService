@@ -1,0 +1,42 @@
+<!--pages/Publish-post.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" >
+  <view class="pic1">
+    <label class='lbl'>公告图: </label>
+    <image class='logoinfo' bindtap="upimg" src='{{Image}}'></image>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='box1'>
+    <label>班级 : </label>
+    <input class='input-title' placeholder='班级名称' bindinput="clsInput"  placeholder-class="phcolor"></input>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='box1'>
+    <label>公告标题</label>
+    <input class='input-title'  placeholder="请输入公告标题"  bindinput="titleInput" placeholder-class="phcolor"></input>
+  </view>
+
+
+  <view class='line'></view>
+
+  <view class='box2'>
+    <label>公告内容</label>
+    <view class="conts">
+      <textarea class="areas" placeholder='请输入公告内容' placeholder-class="phcolor" maxlength="{{max}}" bindinput="inputPost">
+        <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+        <text class="hint">{{texts}}</text>
+      </textarea>
+    </view>
+
+  </view>
+
+
+  <view class="butn">
+    <button type='default' class="reset" form-type="reset">重置</button>
+    <button type='primary' class="" form-type="submit">提交</button>
+  </view>
+
+</form>

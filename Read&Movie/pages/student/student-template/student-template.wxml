@@ -2,11 +2,11 @@
   <view class='container'>
     <!-- <text class='content'>{{questions}}</text> -->
     <view class='content'>
-      {{questions}}     
+      {{index}}{{Problemname}}     
     </view>
     <view>
       <radio-group>
-        <label class="radio" wx:for="{{items}}" wx:for-item="cell">
+        <label class="radio" wx:for="{{Items}}" wx:for-item="cell">
           <radio value="{{cell.name}}" class='choice' />{{cell.value}}
           <text>\n</text>
         </label>

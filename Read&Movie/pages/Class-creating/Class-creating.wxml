@@ -1,0 +1,26 @@
+<view class='page'>
+
+
+  <form class='form' bindsubmit='formSubmit' bindreset='formReset'>
+    <view class='input_frame'>
+      <label class='lbl' >头像: </label>
+      <image class='logoinfo' bindtap="upimg" src='{{Clsicon}}'></image>  
+    </view>
+
+      <view class='input_frame'>
+        <label class='lbl'>班级 : </label>
+        <input value="{{Clsname}}" placeholder='班级名称（必填）' class="inputText "  bindinput="clsInput"></input>
+      </view>
+
+      <view  class='input_frame'>
+        <label class='lbl'>教师 : </label>
+        <input value="{{Usrid}}" placeholder='教师号（必填）' class="inputText " bindinput="usrInput"></input>
+      </view>
+  </form>
+
+  <view class='butn'>
+    <button bindtap='reset'>重置</button>
+    <button type='primary' form-type='submit' bindtap='sbmt'>保存</button>
+  </view>
+
+</view>

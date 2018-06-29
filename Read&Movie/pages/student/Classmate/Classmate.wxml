@@ -1,7 +1,7 @@
 <block wx:for='{{groups}}'>
   <view class='container'>
     <view class='first-line'>
-      <image src='{{userInfo.avatarUrl}}' class='icon'></image>
+      <image src='/images/SHU.jpg' class='icon'></image>
       <text class='class-name'>{{item.Studentname}}</text>
       <view class='text' bindtap='chooseSezi'>{{item.Studentid}}</view>
     </view>

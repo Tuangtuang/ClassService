@@ -1,0 +1,86 @@
+page {
+  height: 100%;
+}
+
+.srh_frame {
+  display: flex;
+  flex-direction: row;
+}
+
+.search {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search_arr {
+  border: 1px solid lightgrey;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+
+.search_arr input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+
+.phcolor{  
+    color: #E8E8E8	;  
+}
+
+.srh_btn {
+  margin-left: 8rpx;
+  margin-right: 8rpx;
+  width: 15%;
+  height: 60rpx;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+}
+
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  left: 25rpx;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+swiper {
+  width: 100%;
+  height: 500rpx;
+}
+
+swiper image {
+  width: 100%;
+  height: 500rpx;
+}
+
+.blk {
+  display: inline-block;
+  margin-top: 8rpx;
+}
+
+.blkitem {
+  display: inline-block;
+  width: 33%;
+  height: 6rem;
+  line-height: 6rem;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  text-align: center;
+}
+
+.butn {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}

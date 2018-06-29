@@ -1,0 +1,55 @@
+.choice {
+  border-bottom: 1px solid lightgray;
+  height: 130px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.row-wrap {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+}
+
+.lbl {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.pikr {
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+
+.btn {
+  height: 50px;
+  float: right;
+  margin-right: 8px;
+}
+
+.tot {
+  width: 100%;
+  color: lightsalmon;
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 120%;
+}
+
+.feedback-item {
+  font-size: 80%;
+}
+
+.msg {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.user-name {
+  margin-left: 20rpx;
+}

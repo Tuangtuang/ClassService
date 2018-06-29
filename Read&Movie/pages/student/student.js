@@ -68,5 +68,10 @@ Page({
     wx.navigateTo({
       url: 'Class/Class',
     })
+  },
+  EnterClass:function(e){
+    wx.navigateTo({
+      url: 'Add-Class/Add-Class',
+    })
   }
 })

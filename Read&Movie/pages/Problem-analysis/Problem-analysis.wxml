@@ -1,0 +1,35 @@
+<view class='choice'>
+
+  <view class="form-box">
+    <view class="row-wrap">
+      <label class="lbl">选择班级: </label>
+      <picker bindchange="bindClsPickerChange" value="{{clsIndex}}" range="{{ClsArray}}">
+        <view class="pikr">{{ClsArray[clsIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="row-wrap">
+      <view class="lbl">选择试卷: </view>
+      <picker bindchange="bindPaprPickerChange" value="{{paperIndex}}" range="{{PaprArray}}">
+        <view class="pikr">{{PaprArray[paperIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="btn">
+    <button size="mini" bindtap="tapConfirm" type="primary" formType="submit">确定</button>
+  </view>
+
+</view>
+
+<view class='tot'>
+  <text >{{'总体正确率：' + Allcorr+'%'}}</text>
+</view>
+
+<view wx:for="{{Feedback}}" wx:key="id" class='feedback-item'>
+  <view id='{{item.id}}' class='msg'>
+    <text class='user-name'>{{'学号：'+item.Studentid}}\n</text>
+    <text class='user-name'>{{'姓名：'+item.Studentname}}\n</text>
+    <text class='user-name'>{{'正确率：'+item.Correctionrate}}</text>
+  </view>
+</view>

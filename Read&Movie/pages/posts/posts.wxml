@@ -11,8 +11,8 @@
       <image src='/images/iqiyi.png' class='lunbo'></image>
     </swiper-item>
   </swiper>
-  <block wx:for="{{postkey}}" for-item="item">
-    <view catchtap='onTap' data-Id="{{item.postId}}">
+  <block wx:for="{{groups}}" for-item="item">
+    <view catchtap='onTap' data-id="{{item.Title}}" >
       <template is="postitem" data='{{...item}}' />
     </view>
   </block>

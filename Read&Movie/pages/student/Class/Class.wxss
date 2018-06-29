@@ -54,13 +54,12 @@
   color: gray;
   margin-left: 150rpx;
   margin-bottom: 20rpx;
-  font-size: 30rpx;
+
 }
 
 .Num{
 
   margin-left: 150rpx;
-  font-size: 30rpx;
   color: gray;
 }
 

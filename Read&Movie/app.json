@@ -1,14 +1,20 @@
 {
   "pages": [
-    "pages/teacher/Paper-index/Paper-index",
-    "pages/student/student",
+   "pages/login/login","pages/student/student", "pages/student/Class/Class","pages/Teacher-index/Teacher-index",
+    "pages/student/Classmate/Classmate",
+    "pages/student/Add-Class/Add-Class",
+    
+    "pages/Class-choice/Class-choice",
     "pages/posts/posts",
     "pages/student/Paper/Paper",
     "pages/posts/post-detail/post-detail",
-    "pages/student/Class/Class",
-    "pages/student/Classmate/Classmate",
-    "pages/student/Paper-index/Paper-index"
-    
+    "pages/Publish-post/Publish-post","pages/student/Paper-index/Paper-index",
+    "pages/teacher/Paper-index/Paper-index",
+    "pages/Problem-analysis/Problem-analysis",
+    "pages/Class-creating/Class-creating",
+    "pages/Class-done/Class-done",
+    "pages/Studentview/Studentview",
+    "pages/Paper-StuDetail/ Paper-StuDetail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000000",

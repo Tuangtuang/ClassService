@@ -1,56 +1,49 @@
 //index.js
 //获取应用实例
-const app = getApp()
-var ClassmateData=require("../../../data/Classmate-data.js")
+var app = getApp()
+//var ClassmateData=require("../../../data/Classmate-data.js")
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    groups:[]
+    groups: [],
+    Classname: '',
   },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    this.setData({groups:ClassmateData.postList})
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+
+
+  onLoad: function(option) {
+    var that = this;
+    var id=JSON.parse(option.id);
+    console.log(id);
+    that.setData({
+      //groups:ClassmateData.postList, 
+      Classname: id,
+    });
+    console.log("Classname:", that.data.Classname);
+    wx.request({
+      url: 'http://localhost:8081/api/both/studentInformation',
+      method: "GET",
+      header: {
+        "Authorization": app.globalData.token,
+        //'content-type':'application/ x-www-form-urlencoded'
+      },
+      data: {
+        "Classname": that.data.Classname
+      },
+      success: function(res) {
+        console.log('同学名单',res);
+        that.setData({
+          groups: res.data.data
+        })
+      },
+      fail: function(e) {
+        wx.showToast({
+          title: '请检查网络',
+          icon: 'loading',
+          duration: 800
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
+    //that.data.Classname = option.id;
+    // console.log(option);
+    // console.log("Classname:",that.data.Classname);
   }
 })

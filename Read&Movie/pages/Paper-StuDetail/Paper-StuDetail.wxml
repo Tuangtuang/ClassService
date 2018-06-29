@@ -1,0 +1,33 @@
+<!--试卷列表点击进入-->
+<view class='choice'>
+
+  <view class="form-box">
+    <view class="row-wrap">
+      <label class="lbl">学生: </label>
+      <input class="lbl" bindchange="StuidInput" placeholder='学号' placeholder-class="place-holder"></input>
+    </view>
+
+    <view class="row-wrap">
+      <view class="lbl">题型: </view>
+      <input class="lbl" bindchange="ProtypeInput" placeholder='1-单选/2-多选/3-判断/4-填空' placeholder-class="place-holder"></input>
+    </view>
+  </view>
+
+  <view class="btn">
+    <button size="mini" bindtap="tapConfirm" type="primary" formType="submit">确定</button>
+  </view>
+</view>
+
+<view>
+  <text class='problm'>{{'题目： '+Problem}}</text>
+  <view wx:for="{{Items}}" wx:key="id" class='alter-item'>
+    <view class='alter'>
+      <text>{{item.name+":"}}{{item.value}}\n</text>
+    </view>
+  </view>
+  <view class='result'>
+    <text>{{'学生答案：'+Studentanswer}}</text>
+    <text class='text2'>{{'正确答案：'+Rightanswer}}\n</text>
+    <text>结果：{{Iscorrect == '2' ? '错误': '正确' }}</text>
+  </view>
+</view>

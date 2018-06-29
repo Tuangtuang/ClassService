@@ -1,19 +1,19 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class='container'>
-  <image src='/images/post/sls.jpg' class='head-image'></image>
+  <!-- <image src='/images/post/sls.jpg' class='head-image'></image> -->
   <view class='author-container'>
-    <image src='/images/avatar/3.png' class='portrait'></image>
-    <text>殷子良</text>
-    <text>发表于</text>
-    <text>3天前</text>
+    <!-- <image src='/images/avatar/3.png' class='portrait'></image>
+    <!-- <text>殷子良</text> -->
+    <!-- <text>发表于</text> --> 
+  <text>{{Publishtime}}</text>  
   </view>
-  <text>我是神仙</text>
+  <text>{{title}}</text>
   <view>
     <view>
-      <image src='/images/icon/collection.png'></image>
-      <image src='/images/icon/share.png'></image>
+        <image src='{{Image}}'></image> 
+      <!-- <image src='/images/icon/share.png'></image>  -->
     </view>
     <view></view>
   </view>
-  <text>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text>
+  <text>{{Content}}</text>
 </view>

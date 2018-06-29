@@ -1,0 +1,49 @@
+/* pages/Paper-StuDetail/ Paper-StuDetail.wxss */
+.choice{
+    border-bottom: 1px solid lightgray;
+    height: 130px;
+    width: 100%;
+}
+.form-box{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+}
+.row-wrap{
+  display: flex;
+  flex-direction:row;
+  height: 50px;
+  width: 100%;
+}
+
+.lbl{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+
+.btn{
+  height: 50px;
+  float: right;
+  margin-right: 8px;
+}
+
+.place-holder{
+  font-size: 14px;
+}
+.problm{
+  margin-left: 8px;
+}
+
+.alter{
+  margin-left: 25px;
+}
+.text2{
+  margin-left: 70rpx;
+}
+.result{
+  margin-left: 25px;
+  font-size: 15px;
+  color:red;
+}

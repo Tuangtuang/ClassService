@@ -1,10 +1,10 @@
 <view>
-  <block wx:for="{{postkey}}">
+  <block wx:for="{{groups}}">
     <view class='container'>
       <view class='first-line'>
         <image src='{{item.Classicon}}' class='icon'></image>
         <text class='class-name'>{{item.Classname}}</text>
-        <view class='text' bindtap='chooseSezi'>详情🔎</view>
+        <view class='text' bindtap='chooseSezi' data-id='{{item.Classname}}'>详情🔎</view>
       </view>
       <view class='second-line'>
         <text class='teacher'>教师：{{item.Teachername}}</text>

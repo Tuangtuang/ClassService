@@ -14,31 +14,46 @@
         <view class="" hidden="{{activeIndex != 0}}">
           <import src='../student-template/student-template.wxml' />
           <view class='container'>
-            <text class='title'>PaperName</text>
-            <text class='date'>2018-6-18</text>
-            <text class='deadline'>时限：00:01:00</text>
+            <text class='title'>{{Papername}}</text>
+            <text class='date'>{{Date}}</text>
+            <!-- <text class='deadline'>时限：00:01:00</text> -->
             <text class='type'>一、单选题</text>
-            <block wx:for="{{Singlegroups}}" for-item="item" for-index='index'>
+            <block wx:for="{{Singlegroups}}">
               <!-- <text>HHH</text> -->
-              <template is="problems" data='{{...item}}' />
+              <!-- <template is="problems" data='{{...item}}' /> -->
+              <view class='container'>
+                <!-- <text class='content'>{{questions}}</text> -->
+                <view class='content'>
+                  {{index+1}}. {{item.Problemname}}
+                </view>
+                <view>
+                  <radio-group bindchange="SingleChange" data-id='{{item.Problemid}}'>
+                    <label class="radio" wx:for="{{item.Items}}" wx:for-item="cell">
+                      <radio value="{{cell.name}}" class='choice' />{{cell.value}}
+                      <text>\n</text>
+                    </label>
+                  </radio-group>
+                </view>
+              </view>
             </block>
+            <!-- <button class="weui-btn" formType="submit" >完成</button> -->
           </view>
         </view>
-        <view  hidden="{{activeIndex != 1}}">
+        <view hidden="{{activeIndex != 1}}">
           <view class='container'>
-            <text class='title'>PaperName</text>
-            <text class='date'>2018-6-18</text>
-            <text class='deadline'>时限：00:01:00</text>
+            <text class='title'>{{Papername}}</text>
+            <text class='date'>{{Date}}</text>
+            <!-- <text class='deadline'>时限：00:01:00</text>  -->
             <text class='type'>二、多选题</text>
             <block wx:for="{{Multiplegroups}}" for-item="item" for-index='index'>
               <view class='loop-container'>
                 <view class='content'>
-                  {{item.questions}}
+                  {{index+1}}. {{item.Problemname}}
                 </view>
                 <view>
-                  <checkbox-group>
+                  <checkbox-group bindchange="CheckboxChange"data-id='{{item.Problemid}}'>
                     <view>
-                      <label class="checkbox" wx:for="{{item.items}}" wx:for-item="cell">
+                      <label class="checkbox" wx:for="{{item.Items}}" wx:for-item="cell">
                         <checkbox value="{{cell.name}}" checked="{{cell.checked}}" class='choice' />{{cell.value}}
                         <text>\n</text>
                       </label>
@@ -47,22 +62,42 @@
                 </view>
               </view>
             </block>
+            <!-- <button class="weui-btn" formType="submit" >完成</button> -->
           </view>
         </view>
-        <view  class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
           <view class='container'>
-            <text class='title'>PaperName</text>
-            <text class='date'>2018-6-18</text>
-            <text class='deadline'>时限：00:01:00</text>
+            <text class='title'>{{Papername}}</text>
+            <text class='date'>{{Date}}</text>
+            <!-- <text class='deadline'>时限：00:01:00</text>  -->
             <text class='type'>三、判断题</text>
             <block wx:for="{{Judgegroups}}" for-item="item" for-index='index'>
               <!-- <text>HHH</text> -->
-              <template is="problems" data='{{...item}}' />
+              <view class='container'>
+                <!-- <text class='content'>{{questions}}</text> -->
+                <view class='content' >
+                  {{index+1}}. {{item.Problemname}}
+                </view>
+                <view>
+                  <radio-group>
+                    <label class="radio" wx:for="{{item.Items}}" wx:for-item="cell">
+                      <radio value="{{cell.name}}" class='choice' />{{cell.value}}
+                      <text>\n</text>
+                    </label>
+                  </radio-group>
+                </view>
+              </view>
+              <radio-group bindchange="radioChange" class="radio" data-id='{{item.Problemid}}'>
+                <radio value='1'>正确</radio>
+                <text>\n</text>
+                <radio value='2'>错误</radio>
+              </radio-group>
             </block>
+            <!-- <button class="weui-btn" formType="submit" >完成</button> -->
           </view>
-
         </view>
       </view>
+      <button class="weui-btn" catchtap='submit' type="primary">提交</button>
     </view>
   </view>
 </view>

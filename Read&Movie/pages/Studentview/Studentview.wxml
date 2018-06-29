@@ -1,0 +1,8 @@
+<view class="container">
+  <view wx:for="{{studentinfo}}" wx:key="id" class='msg-item'  >
+    <view id='{{item.Studentid}}' class='msg' bindtap='Topaperdetail'>
+      <image class='header-img' src="../../images/Student.png" ></image>
+      <text class='user-name' bindtap='classView'>{{'学号：'+item.Studentid}}\n{{'学生：'+item.Studentname}}</text>
+    </view>
+  </view>
+</view>

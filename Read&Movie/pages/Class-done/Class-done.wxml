@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:for="{{classinfo}}" wx:key="id" class='msg-item'  >
+    <view id='{{item.id}}' class='msg' >
+      <image class='header-img' src="{{item.Clsicon}}" bindtap='classView' ></image>
+      <text class='user-name' bindtap='classView'>{{'班级：'+item.Clsname}}\n{{'教师：'+Teacher}}</text>
+      <icon class='delete-butn' type='cancel' size="50" data-deletecls="{{item.Clsname}}" data-deleteid="{{item.id}}" bindtap="deleteClick">删除</icon>.
+    </view>
+  </view>
+</view>

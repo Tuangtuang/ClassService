@@ -1,0 +1,9 @@
+<view>
+  <form bindsubmit="formSubmit">
+    <image src='/images/knowledge.jpeg' class='picture'></image>
+    <view class='container'>
+      <input placeholder='请输入班级名称' name='ClassName' class='input-box' value='{{check}}'></input>
+    </view>
+    <button class="submit" formType="submit" type="primary">确认</button>
+  </form>
+</view>

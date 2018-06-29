@@ -15,9 +15,9 @@
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
           <form bindsubmit="formSubmit" bindreset="formReset">
             <view class="page-section">
-              <view class="page-section-title">请输入题目</view>
+
               <view class="textarea-wrp">
-                <textarea bindblur="bindTextAreaBlur" maxlength='-1' auto-focus='ture' style='height:150rpx' name='Problem' bindtap="bindButtonTap" value="{{empty}}" />
+                <textarea bindblur="bindTextAreaBlur" maxlength='-1' auto-focus='ture' style='height:150rpx' name='Problem' bindtap="bindButtonTap" value="{{empty}}" placeholder='请输入题目' placeholder-class='zhanwei' />
               </view>
             </view>
             <view class='choice'>
@@ -69,7 +69,7 @@
               </radio-group>
               <view class='bottom-button'>
                 <button class="weui-btn" formType="reset">重置</button>
-                <button class="weui-btn" formType="submit" type="primary" catchtap='onClick'>提交</button>
+                <button class="weui-btn" formType="submit" type="primary" >提交</button>
               </view>
 
             </view>
@@ -80,9 +80,8 @@
         <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
           <form bindsubmit="formSubmit" bindreset="formReset">
             <view class="page-section">
-              <view class="page-section-title">请输入题目</view>
               <view class="textarea-wrp">
-                <textarea bindblur="bindTextAreaBlur" maxlength='-1' name='Problem' bindtap="bindButtonTap" style='height:150rpx' bindinput="Setting" value="{{empty}}" />
+                <textarea bindblur="bindTextAreaBlur" maxlength='-1' name='Problem' bindtap="bindButtonTap" style='height:150rpx' bindinput="Setting" value="{{empty}}" placeholder='请输入题目' />
               </view>
             </view>
             <view class='choice'>
@@ -144,9 +143,9 @@
         <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
           <form bindsubmit="formSubmit" bindreset="formReset">
             <view class="page-section">
-              <view class="page-section-title">请输入题目</view>
+
               <view class="textarea-wrp">
-                <textarea bindblur="bindTextAreaBlur" maxlength='-1' name='Problem' bindtap="bindButtonTap" style='height:150rpx' value="{{empty}}" />
+                <textarea bindblur="bindTextAreaBlur" maxlength='-1' name='Problem' bindtap="bindButtonTap" style='height:150rpx' value="{{empty}}" placeholder='请输入题目' />
               </view>
             </view>
             <view class='choice'>
@@ -189,88 +188,98 @@
         <view class='commodity_screen' wx:if="{{chooseSize}}" bindtap='hideModal'></view>
         <view class='commodity_attr_box' wx:if="{{chooseSize}}" animation='{{animationData}}'>
           <scroll-view class='container' scroll-y='true'>
-            <text class='type'>一、单选题\n</text>
-            <block wx:for="{{SingleFromStore}}" for-item="item" for-index='index'>
-              <view wx:if="{{index>=1}}">
-                <view>
-                  <text class='inner-Questions'>
+            <view class='view'>
+              <text class='type'>一、单选题\n</text>
+              <block wx:for="{{SingleFromStore}}" for-item="item" for-index='index'>
+                <view wx:if="{{index>=1}}">
+                  <view>
+                    <text class='inner-Questions'>
                 {{index}}. {{item.Problem}}
                 </text>
+                  </view>
+                  <view>
+                    <radio-group class="radio-group" bindchange="radioChange">
+                      <label class="radio">
+                        <radio disabled='true' checked="{{item.Answer=='A'}}" />{{item.A}}
+                      </label>
+                      <label class="radio">
+                        <radio disabled='true' checked="{{item.Answer=='B'}}" />{{item.B}}
+                      </label>
+                      <label class="radio">
+                        <radio disabled='true' checked="{{item.Answer=='C'}}" />{{item.C}}
+                      </label>
+                      <label class="radio">
+                        <radio disabled='true' checked="{{item.Answer=='D'}}" />{{item.D}}
+                      </label>
+                    </radio-group>
+                  </view>
                 </view>
-                <view>
-                  <radio-group class="radio-group" bindchange="radioChange">
-                    <label class="radio">
-                      <radio disabled='true' checked="{{item.Answer=='A'}}" />{{item.A}}
-                    </label>
-                    <label class="radio">
-                      <radio disabled='true' checked="{{item.Answer=='B'}}" />{{item.B}}
-                    </label>
-                    <label class="radio">
-                      <radio disabled='true' checked="{{item.Answer=='C'}}" />{{item.C}}
-                    </label>
-                    <label class="radio">
-                      <radio disabled='true' checked="{{item.Answer=='D'}}" />{{item.D}}
-                    </label>
-                  </radio-group>
-                </view>
-              </view>
 
-            </block>
-            <text class='type'>二、多选题\n</text>
-            <block wx:for="{{MultipleFromStore}}" for-item="item" for-index='index'>
-              <view wx:if="{{index>=1}}">
-                <view>
-                  <text class='inner-Questions'>
+              </block>
+            </view>
+
+            <view class='view'>
+              <text class='type'>二、多选题\n</text>
+              <block wx:for="{{MultipleFromStore}}" for-item="item" for-index='index'>
+                <view wx:if="{{index>=1}}">
+                  <view>
+                    <text class='inner-Questions'>
                 {{index}}. {{item.Problem}}
                 </text>
+                  </view>
+                  <view>
+                    <checkbox-group bindchange="checkboxChange">
+                      <label class="checkbox">
+                        <checkbox disabled='true' />
+                        <text class='Multiple-Choice'>{{item.A}}\n</text>
+                      </label>
+                      <label class="checkbox">
+                        <checkbox disabled='true' />
+                        <text class='Multiple-Choice'>{{item.B}}\n</text>
+                      </label>
+                      <label class="checkbox">
+                        <checkbox disabled='true' />
+                        <text class='Multiple-Choice'>{{item.C}}\n</text>
+                      </label>
+                      <label class="checkbox">
+                        <checkbox disabled='true' />
+                        <text class='Multiple-Choice'>{{item.D}}\n</text>
+                      </label>
+                    </checkbox-group>
+                  </view>
                 </view>
-                <view>
-                  <checkbox-group bindchange="checkboxChange">
-                    <label class="checkbox">
-                      <checkbox disabled='true' />
-                      <text class='Multiple-Choice'>{{item.A}}\n</text>
-                    </label>
-                    <label class="checkbox">
-                      <checkbox disabled='true' />
-                      <text class='Multiple-Choice'>{{item.B}}\n</text>
-                    </label>
-                    <label class="checkbox">
-                      <checkbox disabled='true' />
-                      <text class='Multiple-Choice'>{{item.C}}\n</text>
-                    </label>
-                    <label class="checkbox">
-                      <checkbox disabled='true' />
-                      <text class='Multiple-Choice'>{{item.D}}\n</text>
-                    </label>
-                  </checkbox-group>
-                </view>
-              </view>
-            </block>
-            <text class='type'>三、判断题\n</text>
-            <block wx:for="{{JudgeFromStore}}" for-item="item" for-index='index'>
-              <view wx:if="{{index>=1}}">
-                <view>
-                  <text class='inner-Questions'>
+              </block>
+            </view>
+
+            <view class='view'>
+              <text class='type'>三、判断题\n</text>
+              <block wx:for="{{JudgeFromStore}}" for-item="item" for-index='index'>
+                <view wx:if="{{index>=1}}">
+                  <view>
+                    <text class='inner-Questions'>
                     {{index}}. {{item.Problem}}
                   </text>
-                </view>
-                <view>
-                  <radio-group class="radio-group" bindchange="radioChange">
-                    <label class="radio">
-                      <radio disabled='true' checked="{{item.Answer==1}}" />正确
-                    </label>
-                    <label class="radio">
-                      <radio disabled='true' checked="{{item.Answer==0}}" />错误
-                    </label>
+                  </view>
+                  <view>
+                    <radio-group class="radio-group" bindchange="radioChange">
+                      <label class="radio">
+                        <radio disabled='true' checked="{{item.Answer==1}}" />正确
+                      </label>
+                      <label class="radio">
+                        <radio disabled='true' checked="{{item.Answer==0}}" />错误
+                      </label>
 
-                  </radio-group>
+                    </radio-group>
+                  </view>
                 </view>
-              </view>
 
-            </block>
+              </block>
+            </view>
+
             <!-- <text>单选题：{{SingleFromStore}}\n</text>
             <text>多选题：{{MultipleFromStore}}\n</text>
             <text>判断题：{{JudgeFromStore}}</text> -->
+            <button class="weui-btn" formType="submit" type="primary">发布</button>
           </scroll-view>
         </view>
       </view>

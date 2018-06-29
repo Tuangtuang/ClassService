@@ -1,0 +1,49 @@
+<!--教师登陆首页-->
+
+
+
+<!--公告快讯图片-->
+<view>
+  <view>
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block>
+        <swiper-item>
+          <image src="/images/tec1.jpg" class="slide-image" mode="aspectFill"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/tec2.jpg" class="slide-image" mode="aspectFill"></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/tec3.jpg" class="slide-image" mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+
+  <!--搜索框-->
+  <view class='srh_frame' bindtap="suo">
+    <view class="search">
+      <view class="search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input  placeholder="请输入需要搜索的关键字" placeholder-class="phcolor" value="{{searchValue}}" />
+      </view>
+    </view>
+    <view class='srh_btn'>搜索</view>
+  </view>
+
+
+
+  <!--菜单-->
+  <view>
+    <block wx:for="{{navItems}}" class="blk">
+      <view class='blkitem'>
+        <navigator url='{{item.url}}' hover-class="navigator-hover">{{item.name}}</navigator>
+      </view>
+    </block>
+  </view>
+
+  <!--退出登录-->
+  <button class='butn' type='warn' bindtap='logout'>退出登录</button>
+
+</view>

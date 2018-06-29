@@ -1,0 +1,6 @@
+<view class='btn'>
+  <button class="cls" type="primary" bindtap='viewAllStudent'>查看班级列表</button>
+  <button class="post" type="primary" bindtap='viewAllPost'>查看班级公告</button>
+
+
+</view>

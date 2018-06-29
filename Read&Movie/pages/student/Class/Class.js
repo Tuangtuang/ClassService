@@ -1,19 +1,35 @@
 // pages/student/Class/Class.js
 var ClassData= require("../../../data/Class-data.js")
+var app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    chooseSize: false,
+    curClassName:'',
+    groups:[
+      {
+        Classname: '',
+        Teachername: '',
+        Studentnumber: '',
+        Classicon: '',
+      }
+    ],
     animationData: {
       
-    }
+    },
+    chooseSize: false,
   },
+
+
   chooseSezi: function (e) {
+    //console.log(e.currentTarget.dataset.id);
+    
     // 用that取代this，防止不必要的情况发生
     var that = this;
+    that.setData({ curClassName: e.currentTarget.dataset.id});
+    //console.log(that.data.curClassName);
     // 创建一个动画实例
     var animation = wx.createAnimation({
       // 动画持续时间
@@ -42,6 +58,7 @@ Page({
     }, 200)
   },
 
+
   hideModal: function (e) {
     var that = this;
     var animation = wx.createAnimation({
@@ -63,31 +80,57 @@ Page({
       })
     }, 200)
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  
+
   onClick:function(event){
     wx.navigateTo({
-      url: '../../posts/posts',
+      url: '../../posts/posts?id=' + JSON.stringify(this.data.curClassName),
     })
   },
 
+
   ToPaper:function(event){
     wx.navigateTo({
-      url: '../Paper/Paper',
+      url: '../Paper/Paper?id=' + JSON.stringify(this.data.curClassName),
     })
   },
+
+
   ToClassmate:function(event)
   {
     wx.navigateTo({
-      url: '../Classmate/Classmate',
+      url: '../Classmate/Classmate?id='+JSON.stringify(this.data.curClassName),
     })
   },
+
+
   onLoad: function (options) {
-    this.setData({
-      postkey:ClassData.postList
-    }     
-    );
+    // this.setData({
+    //   postkey:ClassData.postList
+    // }     
+    // );
+    var that=this;
+    wx.request({
+      url: 'http://localhost:8081//api/student/classList',
+      method:"GET",
+      header: {
+        "Authorization":app.globalData.token,
+      },      
+      success:function(res){
+        console.log(res);
+        that.setData({
+          groups:res.data.data
+        })
+        console.log("传进去了？",that.data.groups);
+      },
+      fail:function(res){
+        wx.showToast({
+          title: '请检查网络',
+          icon: 'loading',
+          duration: 800
+        })
+      }
+    })
   },
 
   /**

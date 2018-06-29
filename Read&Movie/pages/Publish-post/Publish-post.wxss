@@ -1,0 +1,91 @@
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #CDC5BF;
+  margin-top: 1px;
+}
+.pic1{
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+}
+.lbl{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+}
+
+.box1{
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+}
+
+.logoinfo {
+  margin-left: 500rpx;
+  margin-top: 30rpx;
+  width:100rpx;
+  height: 100rpx;
+}
+.box2{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+}
+
+.input-title{
+  margin-top: 10rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+}
+
+
+.input-text{
+  margin-top: 10rpx;
+  height: 500px;
+  width:100%;
+  overflow: auto;
+  word-break: break-all;
+  font-size: 30rpx;
+  text-indent: 28rpx;
+  position: relative; 
+
+}
+
+.phcolor{
+  color: #E0E0E0;
+  font-size: 30rpx;
+}
+
+
+.butn {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+
+.conts{
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+}
+.areas{
+  width: 100%;
+  height:152rpx;
+  font-size: 30rpx;
+  text-indent: 28rpx;
+  overflow: hidden;   
+  position: fixed; 
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color:  #E0E0E0;
+  position: absolute;
+  left: 593rpx;
+  top: -6rpx;
+}
+.hint{
+   font-size: 28rpx;
+   position: absolute;
+   top: 120rpx;
+   left: 30rpx;
+}

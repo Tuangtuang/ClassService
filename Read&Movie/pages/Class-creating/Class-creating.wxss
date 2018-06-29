@@ -1,0 +1,51 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 138px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.form {
+  position:absolute;
+  width: 100%;
+  top: 0;
+
+}
+
+.input_frame {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200rpx;
+  z-index: 100;
+  border-bottom: solid 1px lightgray;
+}
+.lbl{
+  margin-top:70rpx;
+  margin-bottom: 50rpx;
+  margin-left: 10rpx;
+  width:150rpx;
+
+}
+.inputText {
+  margin-top:70rpx;
+  margin-bottom: 50rpx;
+  margin-left: 30rpx;
+}
+
+.butn {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+
+.logoinfo {
+  margin-left: 400rpx;
+  margin-right: 80rpx;
+  margin-top: 50rpx;
+  width:100rpx;
+  height: 100rpx;
+}

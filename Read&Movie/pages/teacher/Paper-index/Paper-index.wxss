@@ -28,16 +28,18 @@ page, .page, .page__bd {
 
 .weui-tab__content {
   padding-top: 10px;
-  text-align: center;
+  
 }
 
 textarea {
   width: 700rpx;
   padding: 25rpx 0;
+  margin-left:20rpx;
 }
 
 .textarea-wrp {
   background-color: #fff;
+  height:180rpx;
 }
 
 .page-section {
@@ -154,8 +156,22 @@ textarea {
   margin-left: 20rpx;
 }
 
+
 .inner-Questions {
   word-break: break-all;
   margin-right: 20rpx;
   margin-left: 20rpx;
+}
+
+.zhanwei{
+  text-align: left;
+  margin-top: 10rpx;
+}
+
+.type{
+  font-size:50rpx;
+}
+
+.view{
+  margin-bottom: 30rpx;
 }
